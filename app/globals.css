@@ -2,20 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@media only screen and (max-width: 1536px) {
+    .manualContainer {
+        width: calc(100% - 20%);
+        margin: auto;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+@media only screen and (max-width: 1280px) {
+    .manualContainer {
+        width: calc(100% - 5%);
+        margin: auto;
+    }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+@media only screen and (max-width: 1024px) {
+    .manualContainer {
+        width: calc(100% - 5%);
+        margin: auto;
+    }
 }
+
+@media only screen and (max-width: 768px) {
+    .manualContainer {
+        width: calc(100% - 5%);
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .manualContainer {
+        width: calc(100% - 5%);
+        margin: auto;
+    }
+}
+
+
+
+.swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 0) !important;
+}
+
+.swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 0px) !important;
+    
+}
+
+
+/* start footer*/
+.footer h5 {
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+.footer p  , .footer ul {
+    color: #6b6b6b;
+    padding: 10px 0px;
+    line-height: normal;
+}
+.footer .icon{
+    color: #6b6b6b ;
+    border-color: #6b6b6b;
+    transition: all .5s;
+}
+
+.footer .icon:hover{
+    border-color: white;
+    color: white;
+}
+
+.footer input{
+    border-color: #6b6b6b;
+}
+
+.footer hr {
+    border-color: #6b6b6b ;
+}
+
+.footer ul{
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.footer ul li {
+    transition: padding 0.5s;
+}
+.footer ul li:hover{
+    color: white;
+    padding-left: 7px;
+}
+
+
+/* end footer*/
+

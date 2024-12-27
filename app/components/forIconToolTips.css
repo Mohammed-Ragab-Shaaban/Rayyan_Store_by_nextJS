@@ -1,0 +1,30 @@
+.addToCartIconToolTip::after{
+  content: " ";
+  position: absolute;
+  bottom: -10;
+  left: 12px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: black transparent transparent   transparent;
+}
+
+
+.quickViewIconToolTip::after{
+    content: " ";
+    position: absolute;
+    bottom: -10;
+    left: 50%; 
+    border-width: 6px;
+    border-style: solid;
+    border-color: black transparent transparent   transparent;
+}
+
+.videoIconToolTip::after{
+    content: " ";
+    position: absolute;
+    bottom: -10;
+    right: 12px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: black transparent transparent   transparent;
+}

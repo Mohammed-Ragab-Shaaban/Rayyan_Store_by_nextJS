@@ -6,12 +6,32 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+   
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+
+      transitionProperty: {
+        'display': 'display',
+        'spacing': 'margin, padding',
+      }
+      
     },
+    
+    container:{
+      maxWidth:{
+        DEFAULT: '100%',
+        sm: 'calc(100% - 5%)',
+        lg: 'calc(100% - 5%)',
+        xl: 'calc(100% - 5%)',
+        '2xl': 'calc(100% - 5%)',
+      },
+      center:true,
+    }
+    
+    
   },
   plugins: [],
 };
