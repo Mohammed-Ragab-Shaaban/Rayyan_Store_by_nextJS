@@ -22,7 +22,7 @@ export default function VideoSlider() {
   
     
   return (
-    <div>
+    <div className='homeSlider'>
        <div>
        <Swiper
         style={{
@@ -34,23 +34,24 @@ export default function VideoSlider() {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
         
+        
       >
        
        
         <SwiperSlide>
-            <Image src={sliderImage_2} alt='gif photos' style={{width:"100%", maxHeight:"85vh"}}  priority={true}/>
+            <Image src={sliderImage_2} alt='gif photos' className='w-full videoHomeSlider'  priority={true}/>
         </SwiperSlide>
         <SwiperSlide>
-            <Image src={sliderImage_3} alt='gif photos' style={{width:"100%", maxHeight:"85vh"}} priority={true}/>
+            <Image src={sliderImage_3} alt='gif photos' className='w-full videoHomeSlider' priority={true}/>
         </SwiperSlide>
         <SwiperSlide>
-            <Image src={sliderImage_4} alt='gif photos' style={{width:"100%", maxHeight:"85vh"}} priority={true}/>
+            <Image src={sliderImage_4} alt='gif photos' className='w-full videoHomeSlider' priority={true}/>
         </SwiperSlide>
         <SwiperSlide>
-            <Image src={sliderImage_1} alt='gif photos' style={{width:"100%", maxHeight:"85vh"}} priority={true}/>
+            <Image src={sliderImage_1} alt='gif photos' className='w-full videoHomeSlider' priority={true}/>
         </SwiperSlide>
         <SwiperSlide>
-            <Image src={sliderImage_5} alt='gif photos' style={{width:"100%", maxHeight:"85vh"}} priority={true}/>
+            <Image src={sliderImage_5} alt='gif photos' className='w-full videoHomeSlider' priority={true}/>
         </SwiperSlide>
       </Swiper>
       <Swiper
@@ -62,6 +63,7 @@ export default function VideoSlider() {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
         autoplay={{delay:1000,disableOnInteraction: false}}
+        
       >
        
       

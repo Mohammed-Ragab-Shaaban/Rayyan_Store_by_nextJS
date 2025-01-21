@@ -10,8 +10,8 @@ export default function Search(props) {
             <input type='search'
                   id='search'
                   name='search' 
-                  className='rounded-full bg-white/50 py-1 pl-9 '/>
-            <FontAwesomeIcon icon={faMagnifyingGlass} className='text-white size-5 absolute top-2 left-6 md:left-3' />
+                  className='rounded-full border bg-white/50 py-1 pl-9 '/>
+            <FontAwesomeIcon icon={faMagnifyingGlass} className='size-5 absolute top-2 left-6 md:left-3' />
         </div>
       </div>
 

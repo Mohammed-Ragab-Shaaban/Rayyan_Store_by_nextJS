@@ -6,6 +6,7 @@ import OffersSliders from "./components/homePage-body/offersSliders";
 import BrandsSlider from "./components/homePage-body/brandsSlider";
 
 
+
 export default function Home() {
   return (
     <div>
@@ -25,9 +26,12 @@ export default function Home() {
 
 
 
-//npm i @next/font
+// npm i @next/font
 // tailwind
-//font awesome for icon
+// font awesome for icon
 // slide swiper
 // sweet alert
+// formik
+// axios
+// animate animated
 

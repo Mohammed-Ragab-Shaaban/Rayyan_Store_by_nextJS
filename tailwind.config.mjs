@@ -16,6 +16,10 @@ export default {
       transitionProperty: {
         'display': 'display',
         'spacing': 'margin, padding',
+      },
+
+      flexGrow: {
+        2: '2'
       }
       
     },

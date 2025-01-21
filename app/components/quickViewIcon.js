@@ -21,15 +21,12 @@ export function QuickViewIcon(props) {
   }
 
   return (
-    <span onClick={showImages}  className='bg-black relative *:first:hover:opacity-100 text-white py-1 px-2'>
+    <span onClick={showImages}  className='bg-black relative *:hover:opacity-100  text-white py-1 px-2'>
           <span className='quickViewIconToolTip absolute opacity-0 transition-All duration-500 -top-8 bg-black w-20 p-1 rounded text-xs text-center -left-3/4'>Quick view</span>
           <FontAwesomeIcon icon={faEye} />
       </span>
   )
 }
-
-
-
 
 export function QuickViewImages(){
 
@@ -43,25 +40,26 @@ export function QuickViewImages(){
 
   return(
     <div onClick={showImages} className={`${toggleShowImages ? "block" : "hidden"} fixed top-0 flex justify-center items-center z-40 bg-stone-700/50  w-full right-0 h-screen`}>
-        <div onClick={(e)=>{e.stopPropagation()}} className='w-fit h-fit bg-white flex flex-col justify-center rounded-md p-4'>
-            <div className='flex flex-col sm:flex-row'>
+        <div onClick={(e)=>{e.stopPropagation()}} className=' bg-white flex flex-col justify-center rounded-md p-4'>
+            <div className='flex flex-col sm:flex-row flex-wrap gap-2'>
                 {
                   quickViewImages.map((el,index)=>{
                     return(
-                      <div key={index}>
+                      <div key={index} className='w-36 p-4 hover:border rounded-md flex justify-center items-center'>
                         <Image src={`http://localhost:1337${el.url}`} 
                                 alt='toys' 
                                 width={200}
                                 height={200}
-                                // style={{objectFit:'contain',objectPosition:"50% 50%"}}
-                                className=' transition-transform duration-500 ' />
+                                // objectFit='fit'
+                                style={{objectFit:'contain',objectPosition:"50% 50%",maxHeight:"25vh" }}
+                                 />
                       </div>
                     ) 
                   })
                 }
 
             </div>
-            <button onClick={showImages}  className='py-2 px-4 bg-green-700 rounded-md  text-white'>Done</button>
+            <button onClick={showImages}  className='py-2 px-4 my-2 bg-green-700 rounded-md  text-white'>Done</button>
         </div>
      </div>
 

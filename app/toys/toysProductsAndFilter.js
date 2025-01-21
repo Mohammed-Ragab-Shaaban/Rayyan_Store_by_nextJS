@@ -1,20 +1,33 @@
-import React from 'react'
+"use client"
+import  { useContext, useEffect, useState } from 'react'
 import ToysProducts from './toysProducts'
-import Image from 'next/image'
+import ToysFilter from './toysFilter'
+import { globalContext } from '../components/context';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 export default function ToysProductsAndFilter() {
 
-    // const xx =["Ali","Mohammed","Ali","Mohammed"]
+    const [toysProducts ,setToysProducts] = useState([]);
+    const {toysAfterFilter , setToysAfterFilter , toysFilterStatus,setToysFilterStatus} = useContext(globalContext);
+
+    useEffect(()=>{
+        axios.get("http://localhost:1337/api/toys?populate=*").then((res)=>{
+            setToysProducts(res.data.data);  
+        })
+    },[])
 
   return (
     <div>
         <div className='manualContainer'>
             <div className='grid grid-cols-12'>
-                <div className='col-span-12 md:col-span-3 bg-yellow-300'>Filter
-                     {/* <Image src="http://localhost:1337/uploads/d1_392d34f524.webp" alt="product-Image" style={{maxWidth:"50px"}}/> */}
+                <div className='col-span-12 md:col-span-3 p-2'>
+                    <div className='border-r-2'>
+                        <ToysFilter />
+                    </div>
                 </div>
                 <div className='col-span-12 md:col-span-9'>
-                    <ToysProducts />
+                      <ToysProducts toysProducts={toysAfterFilter.length >= 1 ? toysAfterFilter : toysProducts} />
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@ export default function OffersSlidersGSAP({children}) {
            start: "top top",
            end:"+=4000",
            pin:true,
-           markers:true,
+          
            scrub:true,
            anticipatePin:1, 
           })

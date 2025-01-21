@@ -3,19 +3,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Links from "../links-with-login/links/Links";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import Login from "../links-with-login/loginCartSearch/login";
+import { useContext, useState } from "react";
 import Search from "../links-with-login/loginCartSearch/search";
+import {LoginAndRegisterIcon, LogOutAndProfileIcon} from "../links-with-login/loginCartSearch/loginAndRegisterIcon";
+import { globalContext } from "@/app/components/context";
 
 
 export default function SideBar() {
 
 const [toggleState,setToggleState] = useState(true);
+const {userToken, setUserToken } = useContext(globalContext);
 
   const sideBarToggle = ()=>{
       setToggleState(!toggleState);
   }
-console.log(toggleState);
 
 
   return (
@@ -35,7 +36,8 @@ console.log(toggleState);
                 <Links d_hidden_block = "block"/>
             </div>
             <div>
-              <Login d_hidden_block='block' dd_flex='flex' />
+               {userToken !== null ? <LogOutAndProfileIcon  d_hidden_block='block' dd_flex='flex'/> 
+                                                :<LoginAndRegisterIcon d_hidden_block='block' dd_flex='flex' />}
             </div>
 
         </div>

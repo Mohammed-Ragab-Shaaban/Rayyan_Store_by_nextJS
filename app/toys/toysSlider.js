@@ -7,8 +7,6 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { ToysSlider1, ToysSlider2, ToysSlider3 } from './toysSlider123';
 
-
-
 export function ToysSlider() {
 
   return (
@@ -26,6 +24,7 @@ export function ToysSlider() {
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
+            
             >
             <SwiperSlide>
                 <ToysSlider1 />

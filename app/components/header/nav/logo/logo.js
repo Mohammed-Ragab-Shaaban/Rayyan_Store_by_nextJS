@@ -15,8 +15,8 @@ export default function Logo() {
   // }
 
   return (
-    <div className={`${agbalumo.className} text-white p-5 `} >
-        <h1 className='size-6'>Rayyan</h1> 
+    <div className={`${agbalumo.className} p-4 `} >
+        <h1 className='text-2xl'>Rayyan</h1> 
     </div>
   )
 }

@@ -1,40 +1,39 @@
-
 import Image from 'next/image';
 import React from 'react'
 import AddToCartIcon from '../components/addToCartIcon';
 import {QuickViewIcon, QuickViewImages} from '../components/quickViewIcon';
 import {VideoIcon, VideoView} from '../components/videoIcon';
-// import pp from `http://localhost:1337${toysProducts[0].master_image[0].url}`
+import Link from 'next/link';
 
+export default  function ToysProducts(props) {
 
-
-export default async function ToysProducts() {
-
-    const toysData = await fetch("http://localhost:1337/api/toys?populate=*");
-    const toysInJSON = await toysData.json();
-    const toysProducts = toysInJSON.data
-
-    console.log(toysProducts);
+    // axios.get("http://localhost:1337/api/toys?populate=*").then((res)=>{
+    //     const toysProducts =  res.data.data;
+    // })
+    // const toysData = await fetch("http://localhost:1337/api/toys?populate=*");
+    // const toysInJSON = await toysData.json();
+    // const toysProducts = toysInJSON.data
+    // console.log(props.toysProducts);
 
   return (
     <>
         {/* this div for image show icon (quickViewIcon) */}
         <QuickViewImages />
         <VideoView />
-        <div className='flex flex-wrap gap-4 py-5 justify-center items-center'>
+        <div className='flex flex-wrap gap-4 py-5 justify-center items-center '>
             {
-                toysProducts.map((el,index)=>{
+               props.toysProducts.map((el,index)=>{
                     return(
-                        <div key={index} className='*:hover:scale-100 hover:drop-shadow w-44 hover:border transition-all duration-300 h- rounded-md bg-white'>
+                        <div key={index} className={`${el.stock_status ? "*:hover:scale-100" : null } hover:drop-shadow w-44 hover:border transition-all duration-300 h- rounded-md bg-white`}>
                             <div className='h-44 w-full rounded-t-md bg-white '>
-                                <Image src={`http://localhost:1337${el.master_image[0].url}`} 
-                                        alt='toys' 
-                                        width={200}
-                                        height={300}
-                                        style={{objectFit:'contain',objectPosition:"50% 50%"}}
-                                        className=' transition-transform duration-500 w-full h-full' />
-
-                            
+                                <Link href={`./toys/${el.documentId}`}>
+                                    <Image  src={`http://localhost:1337${el.master_image[0].url}`} 
+                                            alt='toys' 
+                                            width={200}
+                                            height={300}
+                                            style={{objectFit:'contain',objectPosition:"50% 50%"}}
+                                            className=' transition-transform duration-500 w-full h-full' />
+                                </Link>
                             </div>
                             
                             <div className='icons scale-0 flex justify-center gap-x-2 transition-all duration-300 w-full p-1'>

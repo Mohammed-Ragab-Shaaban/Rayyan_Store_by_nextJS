@@ -4,6 +4,11 @@ import Nav from "./components/header/nav/nav";
 import { GlobalContextProvider } from "./components/context";
 import Footer from "./components/footer/footer";
 import ScrolledNav from "./components/header/scrolled Nav/scrolledNav";
+import Login from "./components/header/nav/links-with-login/loginCartSearch/login";
+import SignUp from "./components/header/nav/links-with-login/loginCartSearch/signUp";
+import CartItems from "./components/header/nav/links-with-login/loginCartSearch/cartItems";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 
 const geistSans = Geist({
@@ -26,9 +31,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
         <GlobalContextProvider>
+              <CartItems />
+              <Login />
+              <SignUp />
               <Nav />
+              <Suspense fallback={<Loading />}>
+                {children}
+              </Suspense>
               {/* <ScrolledNav /> */}
-              {children}
               <Footer />
         </GlobalContextProvider>
       </body>

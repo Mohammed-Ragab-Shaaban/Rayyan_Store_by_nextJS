@@ -8,6 +8,12 @@
         width: calc(100% - 20%);
         margin: auto;
     }
+    .videoHomeSlider{
+        min-height: 85vh !important;
+    }
+   .homeSlider img {
+        height: revert-layer !important;
+    }
 }
 
 
@@ -15,6 +21,12 @@
     .manualContainer {
         width: calc(100% - 5%);
         margin: auto;
+    }
+    .videoHomeSlider{
+        min-height: 85vh !important;
+    }
+   .homeSlider img {
+        height: revert-layer !important;
     }
 }
 
@@ -24,12 +36,24 @@
         width: calc(100% - 5%);
         margin: auto;
     }
+    .videoHomeSlider{
+        min-height: 85vh !important;
+    }
+    .homeSlider img {
+        height: revert-layer !important;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .manualContainer {
         width: calc(100% - 5%);
         margin: auto;
+    }
+    .videoHomeSlider{
+        min-height: 75vh !important;
+    }
+    .homeSlider img {
+        height: auto !important;
     }
 }
 
@@ -38,9 +62,38 @@
         width: calc(100% - 5%);
         margin: auto;
     }
+    .videoHomeSlider{
+        min-height: 60vh !important;
+    }
+    .homeSlider img {
+        height: auto !important;
+    }
+
+    .phoneSlider .swiper-button-next::after , .phoneSlider .swiper-button-prev::after {
+        font-size: .1rem;
+    }
+    .phoneSlider .swiper-button-next , .phoneSlider .swiper-button-prev {
+        padding: 0rem !important;
+        width: 30px;
+        height: 30px;
+    }
+   
 }
 
+.phoneSlider .swiper-button-next , .phoneSlider .swiper-button-prev {
+    border: 1px solid white;
+    color: white;
+    padding: 1.3rem ;
+    border-radius: 100%;
+    transition: all .5s;
+}
 
+.phoneSlider .swiper-button-next:hover , .phoneSlider .swiper-button-prev:hover {
+   background-color: red;
+}
+.phoneSlider .swiper-button-next::after , .phoneSlider .swiper-button-prev::after {
+    font-size: .7rem;
+}
 
 .swiper-button-next {
     right: var(--swiper-navigation-sides-offset, 0) !important;
@@ -94,6 +147,61 @@
     padding-left: 7px;
 }
 
-
 /* end footer*/
 
+
+
+/* start in price search input */
+.minPricrInput::-webkit-outer-spin-button,
+.minPricrInput::-webkit-inner-spin-button,
+.maxPricrInput::-webkit-outer-spin-button,
+.maxPricrInput::-webkit-inner-spin-button{
+    display: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* end in price search input */
+
+
+
+/* HTML: <div class="loader"></div> */
+
+/*start loader */
+.loader {
+    width: 4px;
+    color: #000;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 
+      19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 0px,
+      19px 0     0 5px, 38px 0     0 5px, 57px 0     0 5px,
+      19px 19px  0 0px, 38px 19px  0 0px, 57px 19px  0 0px;
+    transform: translateX(-38px);
+    animation: l26 2s infinite linear;
+  }
+  @keyframes l26 {
+    12.5% {box-shadow: 
+      19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 5px,
+      19px 0     0 5px, 38px 0     0 0px, 57px 0     0 5px,
+      19px 19px  0 0px, 38px 19px  0 0px, 57px 19px  0 0px}
+    25%   {box-shadow: 
+      19px -19px 0 5px, 38px -19px 0 0px, 57px -19px 0 5px,
+      19px 0     0 0px, 38px 0     0 0px, 57px 0     0 0px,
+      19px 19px  0 0px, 38px 19px  0 5px, 57px 19px  0 0px}
+    50%   {box-shadow: 
+      19px -19px 0 5px, 38px -19px 0 5px, 57px -19px 0 0px,
+      19px 0     0 0px, 38px 0     0 0px, 57px 0     0 0px,
+      19px 19px  0 0px, 38px 19px  0 0px, 57px 19px  0 5px}
+    62.5% {box-shadow: 
+      19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 0px,
+      19px 0     0 5px, 38px 0     0 0px, 57px 0     0 0px,
+      19px 19px  0 0px, 38px 19px  0 5px, 57px 19px  0 5px}
+    75%   {box-shadow: 
+      19px -19px 0 0px, 38px -19px 0 5px, 57px -19px 0 0px,
+      19px 0     0 0px, 38px 0     0 0px, 57px 0     0 5px,
+      19px 19px  0 0px, 38px 19px  0 0px, 57px 19px  0 5px}
+    87.5% {box-shadow: 
+      19px -19px 0 0px, 38px -19px 0 5px, 57px -19px 0 0px,
+      19px 0     0 0px, 38px 0     0 5px, 57px 0     0 0px,
+      19px 19px  0 5px, 38px 19px  0 0px, 57px 19px  0 0px}
+  }
+  /* end loader */
