@@ -24,6 +24,8 @@ const GlobalContextProvider = ({children})=>{
     const [toysAfterFilter , setToysAfterFilter] = useState([]);
     const [toysFilterStatus , setToysFilterStatus] = useState(false);
     const [phonesAfterFilter,setPhonesAfterFilter] =  useState([]);
+    const [activeSlide, setActiveSlide] = useState(0);
+
 
 
     return(
@@ -36,7 +38,8 @@ const GlobalContextProvider = ({children})=>{
                               countSingleItemPage , setCountSingleItemPage,
                               toysAfterFilter , setToysAfterFilter,
                               toysFilterStatus,setToysFilterStatus,
-                              phonesAfterFilter,setPhonesAfterFilter
+                              phonesAfterFilter,setPhonesAfterFilter,
+                              activeSlide, setActiveSlide
         }}>
 
             {children}
