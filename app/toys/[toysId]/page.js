@@ -31,7 +31,7 @@ export default async function SingleToysPage({ params }) {
             <div className="flex gap-5"><ButtonSinglePage product={SingleToy} />  <AddToCartSinglePage product={SingleToy} /> </div>
             <hr className="my-3" />
             <p>Categories: <span className="text-neutral-500">{SingleToy.category}</span></p>
-            <p>Evaluation </p>
+            <p>Evaluation {SingleToy.evaluation}%</p>
           </div>
         </div>
         {/* end product image and details */}

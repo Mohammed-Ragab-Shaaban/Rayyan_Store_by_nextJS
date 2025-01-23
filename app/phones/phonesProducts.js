@@ -18,7 +18,7 @@ export default function PhonesProducts(props) {
                 return(
                     <div key={index} className={`${el.stock_status ? "*:hover:scale-100" : null }  hover:drop-shadow w-44 hover:border transition-all duration-300 h- rounded-md bg-white`}>
                         <div className='h-44 w-full rounded-t-md bg-white '>
-                            <Link href={`./toys/${el.documentId}`}>
+                            <Link href={`./phones/${el.documentId}`}>
                                 <Image src={`http://localhost:1337${el.master_image[0].url}`} 
                                         alt='toys' 
                                         width={200}

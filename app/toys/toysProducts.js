@@ -7,9 +7,6 @@ import Link from 'next/link';
 
 export default  function ToysProducts(props) {
 
-    // axios.get("http://localhost:1337/api/toys?populate=*").then((res)=>{
-    //     const toysProducts =  res.data.data;
-    // })
     // const toysData = await fetch("http://localhost:1337/api/toys?populate=*");
     // const toysInJSON = await toysData.json();
     // const toysProducts = toysInJSON.data
@@ -57,3 +54,7 @@ export default  function ToysProducts(props) {
     </>
   )
 }
+
+
+
+

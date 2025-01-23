@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import  { useContext, useRef, useState } from 'react'
 import { globalContext } from '../components/context';
 import axios from 'axios';
-import Swal from 'sweetalert2';
+
 
 export default function ToysFilter() {
 
